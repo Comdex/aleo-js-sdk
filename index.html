@@ -80,11 +80,11 @@ npm install --save aleo-js-sdk
 					<h1>Usage</h1>
 				</a>
 				<p>Typescript:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> AleoSDK <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;aleo-js-sdk&#x27;</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { AleoClient, AleoAuthClient } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;aleo-js-sdk&#x27;</span>;
 <span class="hljs-comment">//public rpc</span>
-<span class="hljs-keyword">const</span> aleoClient = AleoSDK.getAleoClient(<span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>);
+<span class="hljs-keyword">const</span> aleoClient = <span class="hljs-keyword">new</span> AleoClient(<span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>);
 <span class="hljs-comment">//private rpc</span>
-<span class="hljs-keyword">const</span> aleoAuthClient = AleoSDK.getAleoAuthClient(
+<span class="hljs-keyword">const</span> aleoAuthClient = <span class="hljs-keyword">new</span> AleoAuthClient(
   <span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>,
   <span class="hljs-string">&#x27;username&#x27;</span>,
   <span class="hljs-string">&#x27;password&#x27;</span>
@@ -96,11 +96,11 @@ aleoClient.get_transaction_info(transaction_id).then(<span class="hljs-built_in"
 aleoAuthClient.create_account().then(<span class="hljs-built_in">console</span>.log);
 </code></pre>
 				<p>NodeJS:</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> AleoSDK = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;aleo-js-sdk&#x27;</span>);
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> { AleoClient, AleoAuthClient } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;aleo-js-sdk&#x27;</span>);
 <span class="hljs-comment">//public rpc</span>
-<span class="hljs-keyword">const</span> aleoClient = AleoSDK.getAleoClient(<span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>);
+<span class="hljs-keyword">const</span> aleoClient = <span class="hljs-keyword">new</span> AleoClient(<span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>);
 <span class="hljs-comment">//private rpc</span>
-<span class="hljs-keyword">const</span> aleoAuthClient = AleoSDK.getAleoAuthClient(
+<span class="hljs-keyword">const</span> aleoAuthClient = <span class="hljs-keyword">new</span> AleoAuthClient(
   <span class="hljs-string">&#x27;http://127.0.0.1:3030/&#x27;</span>,
   <span class="hljs-string">&#x27;username&#x27;</span>,
   <span class="hljs-string">&#x27;password&#x27;</span>
@@ -115,8 +115,7 @@ aleoAuthClient.create_account().then(<span class="hljs-built_in">console</span>.
 					<h1>API Reference</h1>
 				</a>
 				<ul>
-					<li><a href="build/main/index.d.ts">Main API</a></li>
-					<li><a href="build/main/lib/aleo.d.ts">Type API</a></li>
+					<li><a href="https://comdex.github.io/aleo-js-sdk/">API Document</a></li>
 					<li><a href="https://developer.aleo.org/testnet/getting_started/overview">Aleo RPC Document</a></li>
 				</ul>
 			</div>
@@ -136,9 +135,6 @@ aleoAuthClient.create_account().then(<span class="hljs-built_in">console</span>.
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/aleoclient.html" class="tsd-kind-icon">Aleo<wbr>Client</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/aleosdk.html" class="tsd-kind-icon">AleoSDK</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/rpc.html" class="tsd-kind-icon">RPC</a>
