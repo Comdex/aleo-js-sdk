@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { AleoClient } from './aleo';
+import { AleoClient } from '../index';
 
 const aleoClient: AleoClient = new AleoClient('http://127.0.0.1:3030/');
 

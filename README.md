@@ -16,11 +16,11 @@ npm install --save aleo-js-sdk
 Typescript:
 
 ```typescript
-import AleoSDK from 'aleo-js-sdk';
+import { AleoClient, AleoAuthClient } from 'aleo-js-sdk';
 //public rpc
-const aleoClient = AleoSDK.getAleoClient('http://127.0.0.1:3030/');
+const aleoClient = new AleoClient('http://127.0.0.1:3030/');
 //private rpc
-const aleoAuthClient = AleoSDK.getAleoAuthClient(
+const aleoAuthClient = new AleoAuthClient(
   'http://127.0.0.1:3030/',
   'username',
   'password'
@@ -35,11 +35,11 @@ aleoAuthClient.create_account().then(console.log);
 NodeJS:
 
 ```javascript
-const AleoSDK = require('aleo-js-sdk');
+const { AleoClient, AleoAuthClient } = require('aleo-js-sdk');
 //public rpc
-const aleoClient = AleoSDK.getAleoClient('http://127.0.0.1:3030/');
+const aleoClient = new AleoClient('http://127.0.0.1:3030/');
 //private rpc
-const aleoAuthClient = AleoSDK.getAleoAuthClient(
+const aleoAuthClient = new AleoAuthClient(
   'http://127.0.0.1:3030/',
   'username',
   'password'
