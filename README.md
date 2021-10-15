@@ -53,6 +53,5 @@ aleoAuthClient.create_account().then(console.log);
 
 # API Reference
 
-- [Main API](build/main/index.d.ts)
-- [Type API](build/main/lib/aleo.d.ts)
+- [API Document](https://comdex.github.io/aleo-js-sdk/)
 - [Aleo RPC Document](https://developer.aleo.org/testnet/getting_started/overview)
