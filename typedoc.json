@@ -1,0 +1,4525 @@
+{
+	"id": 0,
+	"name": "aleo-js-sdk",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 104,
+			"name": "AleoAuthClient",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 106,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Creates an instance of AleoAuthClient.",
+						"tags": [
+							{
+								"tag": "memberof",
+								"text": "AleoAuthClient\n"
+							}
+						]
+					},
+					"signatures": [
+						{
+							"id": 107,
+							"name": "new AleoAuthClient",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Creates an instance of AleoAuthClient.",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 108,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"shortText": "Aleo Private RPC Endpoints"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 109,
+									"name": "user",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"shortText": "RPC Endpoints auth username"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 110,
+									"name": "password",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"shortText": "RPC Endpoints auth password"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 111,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 104,
+								"name": "AleoAuthClient"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 17,
+							"character": 19
+						}
+					]
+				},
+				{
+					"id": 105,
+					"name": "rpc",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 17,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 80,
+						"name": "RPC"
+					}
+				},
+				{
+					"id": 112,
+					"name": "create_account",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 113,
+							"name": "create_account",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Creates a new account private key and its corresponding account address.",
+								"returns": "{Promise<Account>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 1,
+										"name": "Account"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 42,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 114,
+					"name": "create_raw_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 115,
+							"name": "create_raw_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Creates a new transaction and returns the encoded transaction along with the encoded records.",
+								"returns": "{Promise<RawTransaction>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 116,
+									"name": "old_records",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "An array of hex encoded records to be spent"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 117,
+									"name": "old_account_private_keys",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "An array of private keys authorized to spend the records"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 118,
+									"name": "recipients",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The array of transaction recipient objects"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 5,
+												"name": "TransactionRecipient"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 119,
+									"name": "memo",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The transaction memo"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 120,
+									"name": "network_id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The network id of the transaction"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 18,
+										"name": "RawTransaction"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 57,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 121,
+					"name": "create_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 122,
+							"name": "create_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Create a new transaction from a given transaction kernel, returning the encoded transaction and the new records.",
+								"returns": "{Promise<RawTransaction>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 123,
+									"name": "private_keys",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "An array of private key strings"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 124,
+									"name": "transaction_kernel",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The hex encoded transaction kernel"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 18,
+										"name": "RawTransaction"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 82,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 125,
+					"name": "create_transaction_kernel",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 126,
+							"name": "create_transaction_kernel",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Create a new transaction kernel.",
+								"returns": "{Promise<string>} - The hex encoded transaction kernel",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 127,
+									"name": "old_records",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "An array of hex encoded records to be spent"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 128,
+									"name": "old_account_private_keys",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "An array of private keys authorized to spend the records"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 129,
+									"name": "recipients",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The array of transaction recipient objects"
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 5,
+												"name": "TransactionRecipient"
+											}
+										],
+										"name": "Array"
+									}
+								},
+								{
+									"id": 130,
+									"name": "memo",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "-The transaction memo"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 131,
+									"name": "network_id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The network id of the transaction"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 104,
+							"character": 33
+						}
+					]
+				},
+				{
+					"id": 132,
+					"name": "decode_record",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 133,
+							"name": "decode_record",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns information about a record from serialized record hex.",
+								"returns": "{Promise<Record>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 134,
+									"name": "record_bytes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The raw record hex to decode"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 8,
+										"name": "Record"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 128,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 135,
+					"name": "decrypt_record",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 136,
+							"name": "decrypt_record",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Decrypts the encrypted record and returns the hex encoded bytes of the record.",
+								"returns": "{Promise<string>} - The hex-encoded record bytes",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 137,
+									"name": "encrypted_record",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The encrypted record"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 138,
+									"name": "account_view_key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The account view key used to decrypt the ciphertext"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 140,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 139,
+					"name": "disconnect",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 140,
+							"name": "disconnect",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Disconnects the node from the given address.",
+								"returns": "{Promise<unknown>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 141,
+									"name": "address",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The address to disconnect in an IP:port format"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 158,
+							"character": 18
+						}
+					]
+				},
+				{
+					"id": 142,
+					"name": "get_raw_record",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 143,
+							"name": "get_raw_record",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the hex encoded bytes of a record from its record commitment.",
+								"returns": "{Promise<string>} - The hex-encoded record bytes",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 144,
+									"name": "record_commitment",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The record commitment"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 169,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 145,
+					"name": "get_record_commitment_count",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 146,
+							"name": "get_record_commitment_count",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the number of record commitments that are stored on the full node.",
+								"returns": "{Promise<number>} - The number of stored record commitments",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 179,
+							"character": 35
+						}
+					]
+				},
+				{
+					"id": 147,
+					"name": "get_record_commitments",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 148,
+							"name": "get_record_commitments",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns a list of record commitments that are stored on the full node.",
+								"returns": "{Promise<Array<string>>} - The list of stored record commitments",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoAuthClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Array"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 189,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						106
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						105
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						112,
+						114,
+						121,
+						125,
+						132,
+						135,
+						139,
+						142,
+						145,
+						147
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/aleo.ts",
+					"line": 16,
+					"character": 27
+				}
+			]
+		},
+		{
+			"id": 149,
+			"name": "AleoClient",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 151,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Creates an instance of AleoClient.",
+						"tags": [
+							{
+								"tag": "memberof",
+								"text": "AleoClient\n"
+							}
+						]
+					},
+					"signatures": [
+						{
+							"id": 152,
+							"name": "new AleoClient",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Creates an instance of AleoClient.",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 153,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"shortText": "Aleo Public RPC Endpoints"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 154,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 149,
+								"name": "AleoClient"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 195,
+							"character": 19
+						}
+					]
+				},
+				{
+					"id": 150,
+					"name": "rpc",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true,
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 195,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 80,
+						"name": "RPC"
+					}
+				},
+				{
+					"id": 155,
+					"name": "decode_raw_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 156,
+							"name": "decode_raw_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns information about a transaction from serialized transaction bytes.",
+								"returns": "{Promise<Transaction>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 157,
+									"name": "transaction_bytes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The raw transaction hex to decode"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 34,
+										"name": "Transaction"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 214,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 158,
+					"name": "get_best_block_hash",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 159,
+							"name": "get_best_block_hash",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the block hash of the head of the best valid chain.",
+								"returns": "{Promise<string>} - The block height of the requested block hash",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 226,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 160,
+					"name": "get_block",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 161,
+							"name": "get_block",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns information about a block from a block hash.",
+								"returns": "{Promise<Block>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 162,
+									"name": "block_hash",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The block hash of the requested block"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 21,
+										"name": "Block"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 237,
+							"character": 17
+						}
+					]
+				},
+				{
+					"id": 163,
+					"name": "get_block_count",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 164,
+							"name": "get_block_count",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the number of blocks in the best valid chain.",
+								"returns": "{Promise<number>} - The number of blocks in the best valid chain",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 247,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 165,
+					"name": "get_block_hash",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 166,
+							"name": "get_block_hash",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the block hash of a block at the given block height in the best valid chain.",
+								"returns": "{Promise<string>} - The block hash of the block at the given block height",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 167,
+									"name": "block_height",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The block height of the requested block hash"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 258,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 168,
+					"name": "get_block_template",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 169,
+							"name": "get_block_template",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the current mempool and consensus information known by this node.",
+								"returns": "{Promise<BlockTemplate>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 49,
+										"name": "BlockTemplate"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 268,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 170,
+					"name": "get_connection_count",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 171,
+							"name": "get_connection_count",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the number of connected peers this node has.",
+								"returns": "{Promise<number>} - The number of connected nodes",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 278,
+							"character": 28
+						}
+					]
+				},
+				{
+					"id": 172,
+					"name": "get_network_graph",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 173,
+							"name": "get_network_graph",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the network graph crawled by this node (if it is a bootnode).",
+								"returns": "{Promise<NetworkGraph>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 56,
+										"name": "NetworkGraph"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 288,
+							"character": 25
+						}
+					]
+				},
+				{
+					"id": 174,
+					"name": "get_node_info",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 175,
+							"name": "get_node_info",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns information about the node.",
+								"returns": "{Promise<NodeInfo>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 64,
+										"name": "NodeInfo"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 298,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 176,
+					"name": "get_node_status",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 177,
+							"name": "get_node_status",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns statistics related to the node.",
+								"returns": "{Promise<NodeStatus>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 71,
+										"name": "NodeStatus"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 308,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 178,
+					"name": "get_peer_info",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 179,
+							"name": "get_peer_info",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns the node's connected peers.",
+								"returns": "{Promise<PeerInfo>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 78,
+										"name": "PeerInfo"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 318,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 180,
+					"name": "get_raw_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 181,
+							"name": "get_raw_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"returns": "{Promise<string>} - The hex-encoded transaction bytes",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 182,
+									"name": "transaction_id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The transaction id of the requested transaction hex"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 329,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 183,
+					"name": "get_transaction_info",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 184,
+							"name": "get_transaction_info",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Returns information about a transaction from a transaction id.",
+								"returns": "{Promise<Transaction>}",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 185,
+									"name": "transaction_id",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "-The transaction id of the requested transaction info"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 34,
+										"name": "Transaction"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 340,
+							"character": 28
+						}
+					]
+				},
+				{
+					"id": 186,
+					"name": "send_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 187,
+							"name": "send_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Send raw transaction bytes to this node to be added into the mempool. If valid, the transaction will be stored and propagated to all peers.",
+								"returns": "{Promise<string>} - The transaction id of the sent transaction",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 188,
+									"name": "transaction_bytes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The raw transaction hex to broadcast"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 351,
+							"character": 24
+						}
+					]
+				},
+				{
+					"id": 189,
+					"name": "validate_raw_transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 190,
+							"name": "validate_raw_transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Validate and return if the transaction is valid.",
+								"returns": "{Promise<boolean>} - Check that the transaction is valid",
+								"tags": [
+									{
+										"tag": "memberof",
+										"text": "AleoClient\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 191,
+									"name": "transaction_bytes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The raw transaction hex to validate"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/aleo.ts",
+							"line": 362,
+							"character": 32
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						151
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						150
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						155,
+						158,
+						160,
+						163,
+						165,
+						168,
+						170,
+						172,
+						174,
+						176,
+						178,
+						180,
+						183,
+						186,
+						189
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/aleo.ts",
+					"line": 194,
+					"character": 23
+				}
+			]
+		},
+		{
+			"id": 192,
+			"name": "AleoSDK",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 197,
+					"name": "getAleoAuthClient",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 198,
+							"name": "getAleoAuthClient",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"returns": "{AleoAuthClient}",
+								"tags": [
+									{
+										"tag": "static",
+										"text": ""
+									},
+									{
+										"tag": "memberof",
+										"text": "AleoSDK\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 199,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "Aleo Private RPC Endpoints"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 200,
+									"name": "user",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 201,
+									"name": "password",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "RPC Endpoints auth password"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 202,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 104,
+								"name": "AleoAuthClient"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 30,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 193,
+					"name": "getAleoClient",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 194,
+							"name": "getAleoClient",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"returns": "{AleoClient}",
+								"tags": [
+									{
+										"tag": "static",
+										"text": ""
+									},
+									{
+										"tag": "memberof",
+										"text": "AleoSDK\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 195,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "Aleo Public RPC Endpoints"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 196,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									},
+									"defaultValue": "{}"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 149,
+								"name": "AleoClient"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 15,
+							"character": 22
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						197,
+						193
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 5,
+					"character": 28
+				}
+			]
+		},
+		{
+			"id": 80,
+			"name": "RPC",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 85,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 86,
+							"name": "new RPC",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 87,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 88,
+									"name": "defaultOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									},
+									"defaultValue": "{}"
+								},
+								{
+									"id": 89,
+									"name": "user",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										]
+									}
+								},
+								{
+									"id": 90,
+									"name": "password",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isOptional": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 80,
+								"name": "RPC"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 8,
+							"character": 31
+						}
+					]
+				},
+				{
+					"id": 82,
+					"name": "defaultOptions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 6,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RequestInit"
+					}
+				},
+				{
+					"id": 84,
+					"name": "password",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 8,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							}
+						]
+					}
+				},
+				{
+					"id": 81,
+					"name": "uri",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 5,
+							"character": 5
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 83,
+					"name": "user",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 7,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							}
+						]
+					}
+				},
+				{
+					"id": 94,
+					"name": "call",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 95,
+							"name": "call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 96,
+									"name": "methodName",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 97,
+									"name": "params",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true,
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 27,
+							"character": 12
+						}
+					]
+				},
+				{
+					"id": 98,
+					"name": "mergeOptions",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPrivate": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 99,
+							"name": "mergeOptions",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 100,
+									"name": "overrideOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									}
+								},
+								{
+									"id": 101,
+									"name": "defaultOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"name": "RequestInit"
+									}
+								}
+							],
+							"type": {
+								"type": "intersection",
+								"types": [
+									{
+										"type": "reference",
+										"name": "RequestInit"
+									},
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 102,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {
+												"isExported": true
+											},
+											"children": [
+												{
+													"id": 103,
+													"name": "headers",
+													"kind": 32,
+													"kindString": "Variable",
+													"flags": {
+														"isExported": true
+													},
+													"sources": [
+														{
+															"fileName": "lib/rpc.ts",
+															"line": 80,
+															"character": 13
+														}
+													],
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "array",
+																	"elementType": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															},
+															{
+																"type": "reference",
+																"id": 8,
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																],
+																"name": "Record"
+															},
+															{
+																"type": "reference",
+																"name": "Headers"
+															}
+														]
+													},
+													"defaultValue": "headers"
+												}
+											],
+											"groups": [
+												{
+													"title": "Variables",
+													"kind": 32,
+													"children": [
+														103
+													]
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 69,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 91,
+					"name": "create",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isStatic": true,
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 92,
+							"name": "create",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"parameters": [
+								{
+									"id": 93,
+									"name": "uri",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 80,
+								"name": "RPC"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/rpc.ts",
+							"line": 23,
+							"character": 15
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						85
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						82,
+						84,
+						81,
+						83
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						94,
+						98,
+						91
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/rpc.ts",
+					"line": 4,
+					"character": 16
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "Account",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 4,
+					"name": "address",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 4,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 2,
+					"name": "private_key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 2,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 3,
+					"name": "view_key",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 3,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						4,
+						2,
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 1,
+					"character": 24
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "Block",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 22,
+					"name": "confirmations",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 30,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 23,
+					"name": "difficulty_target",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 31,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 24,
+					"name": "hash",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 32,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 25,
+					"name": "height",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 33,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 26,
+					"name": "merkle_root",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 34,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 27,
+					"name": "nonce",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 35,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 28,
+					"name": "pedersen_merkle_root_hash",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 36,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 29,
+					"name": "previous_block_hash",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 37,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 30,
+					"name": "proof",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 38,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 31,
+					"name": "size",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 39,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 32,
+					"name": "time",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 40,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 33,
+					"name": "transactions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 41,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"name": "Array"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 29,
+					"character": 22
+				}
+			]
+		},
+		{
+			"id": 49,
+			"name": "BlockTemplate",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 51,
+					"name": "block_height",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 63,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 55,
+					"name": "coinbase_value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 67,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 53,
+					"name": "difficulty_target",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 65,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 50,
+					"name": "previous_block_hash",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 62,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 52,
+					"name": "time",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 64,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 54,
+					"name": "transactions",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 66,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						51,
+						55,
+						53,
+						50,
+						52,
+						54
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 61,
+					"character": 30
+				}
+			]
+		},
+		{
+			"id": 56,
+			"name": "NetworkGraph",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 60,
+					"name": "algebraic_connectivity",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 74,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 58,
+					"name": "connection_count",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 72,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 61,
+					"name": "degree_centrality_delta",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 75,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 59,
+					"name": "density",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 73,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 62,
+					"name": "edges",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 76,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 57,
+					"name": "node_count",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 71,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 63,
+					"name": "vertices",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 77,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						60,
+						58,
+						61,
+						59,
+						62,
+						57,
+						63
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 70,
+					"character": 29
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "NodeInfo",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 65,
+					"name": "is_bootnode",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 81,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 66,
+					"name": "is_miner",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 82,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 67,
+					"name": "is_syncing",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 83,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 68,
+					"name": "launched",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 84,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 69,
+					"name": "listening_addr",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 85,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 70,
+					"name": "version",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 86,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						65,
+						66,
+						67,
+						68,
+						69,
+						70
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 80,
+					"character": 25
+				}
+			]
+		},
+		{
+			"id": 71,
+			"name": "NodeStatus",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 72,
+					"name": "connections",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 90,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 73,
+					"name": "handshakes",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 91,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 74,
+					"name": "inbound",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 92,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 75,
+					"name": "misc",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 93,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 76,
+					"name": "outbound",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 94,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 77,
+					"name": "queues",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 95,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						72,
+						73,
+						74,
+						75,
+						76,
+						77
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 89,
+					"character": 27
+				}
+			]
+		},
+		{
+			"id": 78,
+			"name": "PeerInfo",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 79,
+					"name": "peers",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 99,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"name": "Array"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						79
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 98,
+					"character": 25
+				}
+			]
+		},
+		{
+			"id": 18,
+			"name": "RawTransaction",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 20,
+					"name": "encoded_records",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 26,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 19,
+					"name": "encoded_transaction",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 25,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						20,
+						19
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 24,
+					"character": 31
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "Record",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 13,
+					"name": "birth_program_id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 17,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 16,
+					"name": "commitment",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 20,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 17,
+					"name": "commitment_randomness",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 21,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 14,
+					"name": "death_program_id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 18,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 10,
+					"name": "is_dummy",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 14,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 9,
+					"name": "owner",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 13,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 12,
+					"name": "payload",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 16,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 15,
+					"name": "serial_number_nonce",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 19,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 11,
+					"name": "value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 15,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						13,
+						16,
+						17,
+						14,
+						10,
+						9,
+						12,
+						15,
+						11
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 12,
+					"character": 23
+				}
+			]
+		},
+		{
+			"id": 34,
+			"name": "Transaction",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 41,
+					"name": "digest",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 51,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 47,
+					"name": "encrypted_records",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 57,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 44,
+					"name": "local_data_root",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 54,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 39,
+					"name": "memo",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 49,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 40,
+					"name": "network_id",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 50,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 38,
+					"name": "new_commitments",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 48,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 37,
+					"name": "old_serial_numbers",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 47,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 43,
+					"name": "program_commitment",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 53,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 46,
+					"name": "signatures",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 56,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							}
+						],
+						"name": "Array"
+					}
+				},
+				{
+					"id": 36,
+					"name": "size",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 46,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 48,
+					"name": "transaction_metadata",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 58,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				},
+				{
+					"id": 42,
+					"name": "transaction_proof",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 52,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 35,
+					"name": "txid",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 45,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 45,
+					"name": "value_balance",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 55,
+							"character": 15
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						41,
+						47,
+						44,
+						39,
+						40,
+						38,
+						37,
+						43,
+						46,
+						36,
+						48,
+						42,
+						35,
+						45
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 44,
+					"character": 28
+				}
+			]
+		},
+		{
+			"id": 5,
+			"name": "TransactionRecipient",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 6,
+					"name": "address",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 8,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 7,
+					"name": "value",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "lib/response_type.ts",
+							"line": 9,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						6,
+						7
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/response_type.ts",
+					"line": 7,
+					"character": 37
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				104,
+				149,
+				192,
+				80
+			]
+		},
+		{
+			"title": "Interfaces",
+			"kind": 256,
+			"children": [
+				1,
+				21,
+				49,
+				56,
+				64,
+				71,
+				78,
+				18,
+				8,
+				34,
+				5
+			]
+		}
+	]
+}
